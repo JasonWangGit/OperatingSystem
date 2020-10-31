@@ -2,7 +2,7 @@
 
 ## 第1讲 操作系统概述
 
-### 操作系统的定义及作用
+### 1.1 操作系统的定义及作用
 
 #### 操作系统的三个作用
 
@@ -15,7 +15,7 @@
 - 对硬件机器的扩展 → 扩展能力
   - 硬件之上的第一层软件
 
-### 操作系统的特征
+### 1.2 操作系统的特征
 
 #### 操作系统的主要特征
 
@@ -29,16 +29,9 @@
 - 随机： 操作系统必须随时对以不可预测的次序发生的事件进行响应并处理
   - 进程的运行速度不可预知、难以重现系统在某个时刻的状态
 
-### 典型的操作系统架构
+### 1.3 典型的操作系统架构
 
-#### 操作系统的架构
-
-- 用户态
-
-- 内核态
-- 物理硬件
-
-#### 另一种抽象
+#### Windows
 
 - 应用程序
 - 系统功能调用
@@ -52,7 +45,7 @@
 - 系统库和Android运行时
 - Linux内核
 
-### 操作系统分类
+### 1.4 操作系统分类
 
 #### SPOOLING技术
 
@@ -60,29 +53,31 @@
 - 利用磁盘作缓冲，将输入、计算、输出分别组织成独立的任务流，使I/O和计算真正并行
 - 现代计算机系统的打印过程通常采用的是SPOOLING技术
 
-<img src="D:\Program Files\sts-bundle\source\OperatingSystem\image\SPOOLING系统工作原理.png" alt="SPOOLING系统工作原理" style="zoom:30%;" />
+<img src="https://github.com/JasonWangGit/OperatingSystem/blob/master/image/SPOOLING%E7%B3%BB%E7%BB%9F%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86.png" style="zoom:30%;" />
 
 #### 传统的操作系统分类
 
 - 批处理操作系统 
 - 分时系统 
   - 时间片（time slice）：操作系统将CPU的时间划分成若干个片段，称为时间片
-  - “前台”：需要频繁交互的作业
-  - “后台”：时间性要求不强的作业
-- 实时操作系统 
+  - 通用操作系统：分时优先，批处理在后
+    - “前台”：需要频繁交互的作业
+    - “后台”：时间性要求不强的作业
+- 实时操作系统
   - 硬实时系统、软实时系统
 - 个人计算机操作系统 
 - 网络操作系统 
 - 分布式操作系统 
+  - 或以计算机网络为基础，或以多处理机为基础，基本特征是处理分布在不同计算机上
 - 嵌入式操作系统
 
 ## 第2讲 操作系统运行环境与运行机制
 
 
 
-<img src="D:\Program Files\sts-bundle\source\OperatingSystem\image\第2讲.png" alt="第2讲" style="zoom:30%;" />
+<img src="https://github.com/JasonWangGit/OperatingSystem/blob/master/image/%E7%AC%AC2%E8%AE%B2.png" alt="第2讲" style="zoom:30%;" />
 
-### 处理器状态（模式）
+### 2.1 处理器状态（模式）
 
 #### 两类寄存器
 
@@ -111,7 +106,7 @@
 - 内核态 → 用户态 
   - 设置程序状态字PSW
 
-### 中断/异常机制
+### 2.2 中断/异常机制（操作系统的驱动力）
 
 - 中断/异常 对于操作系统的重要性
   - 就好比：汽车的发动机、飞机的引擎
@@ -147,7 +142,7 @@
 
 #### 中断异常的小结
 
-<img src="D:\Program Files\sts-bundle\source\OperatingSystem\image\中断与异常的小结.png" alt="中断与异常的小结" style="zoom:30%;" />
+<img src="https://github.com/JasonWangGit/OperatingSystem/blob/master/image/%E4%B8%AD%E6%96%AD%E4%B8%8E%E5%BC%82%E5%B8%B8%E7%9A%84%E5%B0%8F%E7%BB%93.png" style="zoom:30%;" />
 
 ### 中断/异常机制工作原理
 
