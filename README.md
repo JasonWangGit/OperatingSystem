@@ -1,4 +1,6 @@
-# 重点回顾
+# 操作系统（陈向群）
+
+## 重点回顾
 
 #### 操作系统的主要特征
 
@@ -199,10 +201,6 @@ $$
 #### 页面置换算法小结
 
 <img src="D:\Program Files\sts-bundle\source\OperatingSystem\image\页面置换算法小结.png" alt="页面置换算法小结" style="zoom:30%;" />
-
-
-
-# 操作系统（陈向群）
 
 ## 第1讲 操作系统概述
 
