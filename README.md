@@ -53,7 +53,7 @@ $$
   - 进程用完时间片而放弃CPU，进入下一级就绪队列 
   - 由于阻塞而放弃CPU的进程进入相应的等待队列，一旦等待的事件发生，该进程回到原来一级就绪队列
 
-<img src="D:\Program Files\sts-bundle\source\OperatingSystem\image\小结：各种调度算法的比较.png" alt="小结：各种调度算法的比较" style="zoom:30%;" />
+<img src="https://raw.githubusercontent.com/JasonWangGit/OperatingSystem/master/image/%E5%B0%8F%E7%BB%93%EF%BC%9A%E5%90%84%E7%A7%8D%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95%E7%9A%84%E6%AF%94%E8%BE%83.png" alt="小结：各种调度算法的比较" width="500" height="300" />
 
 #### 内存管理方案
 
@@ -90,7 +90,7 @@ $$
     - 段表：记录了每一段的页表始址和页表长度 
     - 页表：记录了逻辑页号与页框号的对应关系 
 
-<img src="D:\Program Files\sts-bundle\source\OperatingSystem\image\基本内存管理方案小结.png" alt="基本内存管理方案小结" style="zoom:30%;" />
+<img src="https://raw.githubusercontent.com/JasonWangGit/OperatingSystem/master/image/%E5%9F%BA%E6%9C%AC%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E6%96%B9%E6%A1%88%E5%B0%8F%E7%BB%93.png" alt="基本内存管理方案小结" width="500" height="300" />
 
 #### 页面置换算法
 
@@ -105,7 +105,7 @@ $$
 
 - **时钟算法**（Clock）
 
-<img src="D:\Program Files\sts-bundle\source\OperatingSystem\image\时钟算法.png" alt="时钟算法" style="zoom:30%;" />
+<img src="https://raw.githubusercontent.com/JasonWangGit/OperatingSystem/master/image/%E6%97%B6%E9%92%9F%E7%AE%97%E6%B3%95.png" alt="时钟算法" width="500" height="300" />
 
 - **最近未使用算法**（**NRU** - Not Recently Used）
   - 选择在最近一段时间内未使用过的一页并置换，检查其访问位R、修改位M
@@ -116,8 +116,8 @@ $$
       - 启动一个进程时，R、M位置0 
       - R位被定期清零（复位）
 - 时钟算法实现
-  - 从指针的当前位置开始，扫描页框缓冲区，选择遇到的第一个页框（r=0；m=0）用于置换(本扫描过程中，对使用位不做任何修改) 
-  - 如果第1步失败，则重新扫描，选择第一个（r=0； m=1）的页框(本次扫描过程中，对每个跳过的页框，将其使用位设置成0) 
+  - 从指针的当前位置开始，扫描页框缓冲区，选择遇到的第一个页框（r=0；m=0）用于置换（本扫描过程中，对使用位不做任何修改） 
+  - 如果第1步失败，则重新扫描，选择第一个（r=0； m=1）的页框（本次扫描过程中，对每个跳过的页框，将其使用位设置成0） 
   - 如果第2步失败，指针将回到它的最初位置，并且集合中所有页框的使用位均为0。重复第1步， 并且，如果有必要，重复第2步。这样将可以找到供置换的页框
 
 - **最近最少使用算法**（**LRU** - Least Recently Used ）
@@ -183,7 +183,7 @@ $$
   - 内容取决于三个因素： 
     - 访页序列特性 
     - 时刻t 
-    - 工作集窗口长度(Δ)
+    - 工作集窗口长度（Δ）
   - 找出一个不在工作集中的页面并置换它 
   - 每个页表项中有一个字段：记录该页面最后一次被访问的时间 
   - 设置一个时间值T
@@ -200,7 +200,7 @@ $$
 
 #### 页面置换算法小结
 
-<img src="D:\Program Files\sts-bundle\source\OperatingSystem\image\页面置换算法小结.png" alt="页面置换算法小结" style="zoom:30%;" />
+<img src="https://raw.githubusercontent.com/JasonWangGit/OperatingSystem/master/image/%E9%A1%B5%E9%9D%A2%E7%BD%AE%E6%8D%A2%E7%AE%97%E6%B3%95%E5%B0%8F%E7%BB%93.png" alt="页面置换算法小结" width="500" height="300" />
 
 ## 第1讲 操作系统概述
 
@@ -259,7 +259,7 @@ $$
 - 利用磁盘作缓冲，将输入、计算、输出分别组织成独立的任务流，使I/O和计算真正并行
 - 现代计算机系统的打印过程通常采用的是SPOOLING技术
 
-<img src="D:\Program Files\sts-bundle\source\OperatingSystem\image\SPOOLING系统工作原理.png" alt="SPOOLING系统工作原理" style="zoom:30%;" />
+<img src="https://raw.githubusercontent.com/JasonWangGit/OperatingSystem/master/image/SPOOLING%E7%B3%BB%E7%BB%9F%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86.png" alt="SPOOLING系统工作原理" width="500" height="300" />
 
 #### 传统的操作系统分类
 
@@ -279,7 +279,7 @@ $$
 
 ## 第2讲 操作系统运行环境与运行机制
 
-<img src="D:\Program Files\sts-bundle\source\OperatingSystem\image\第2讲.png" alt="第2讲" style="zoom:30%;" />
+<img src="https://raw.githubusercontent.com/JasonWangGit/OperatingSystem/master/image/%E7%AC%AC2%E8%AE%B2.png" alt="第2讲" width="500" height="300" />
 
 ### 2.1 处理器状态（模式）
 
@@ -346,7 +346,7 @@ $$
 
 #### 中断异常的小结
 
-<img src="D:\Program Files\sts-bundle\source\OperatingSystem\image\中断与异常的小结.png" alt="中断与异常的小结" style="zoom:30%;" />
+<img src="https://raw.githubusercontent.com/JasonWangGit/OperatingSystem/master/image/%E4%B8%AD%E6%96%AD%E4%B8%8E%E5%BC%82%E5%B8%B8%E7%9A%84%E5%B0%8F%E7%BB%93.png" alt="中断与异常的小结" width="500" height="300" />
 
 ### 2.3 中断/异常机制工作原理
 
@@ -503,7 +503,7 @@ $$
   - 因等待某一事件而暂时不能运行
     - 如等待读盘结果
 
-<img src="D:\Program Files\sts-bundle\source\OperatingSystem\image\三状态模型及状态转换.png" alt="三状态模型及状态转换" style="zoom:30%;" />
+<img src="https://raw.githubusercontent.com/JasonWangGit/OperatingSystem/master/image/%E4%B8%89%E7%8A%B6%E6%80%81%E6%A8%A1%E5%9E%8B%E5%8F%8A%E7%8A%B6%E6%80%81%E8%BD%AC%E6%8D%A2.png" alt="三状态模型及状态转换" width="500" height="300" />
 
 #### 进程的其他状态
 
@@ -641,7 +641,7 @@ $$
 
 #### 线程的基本概念
 
-<img src="D:\Program Files\sts-bundle\source\OperatingSystem\image\线程的基本概念.png" alt="线程的基本概念" style="zoom:30%;" />
+<img src="https://raw.githubusercontent.com/JasonWangGit/OperatingSystem/master/image/%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.png" alt="线程的基本概念" width="500" height="300" />
 
 - 线程：进程中的一个运行实体，是CPU的调度单位
   - 有时将线程称为轻量级进程
@@ -705,24 +705,24 @@ $$
     - 保存和恢复寄存器…… 
     - 切换地址空间（相关指令比较昂贵） 
   - 间接开销 
-    - 高速缓存(Cache)、缓冲区缓存(Buffer Cache)和 TLB(Translation Look-aside Buffer)失效
+    - 高速缓存（Cache）、缓冲区缓存（Buffer Cache）和 TLB（Translation Look-aside Buffer）失效
 
 #### CPU调度算法的设计
 
-<img src="D:\Program Files\sts-bundle\source\OperatingSystem\image\CPU调度算法的设计.png" alt="CPU调度算法的设计" style="zoom:30%;" />
+<img src="https://raw.githubusercontent.com/JasonWangGit/OperatingSystem/master/image/CPU%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95%E7%9A%84%E8%AE%BE%E8%AE%A1.png" alt="CPU调度算法的设计" width="500" height="300" />
 
 - 调度算法衡量指标
   - 吞吐量 Throughput 
     - 每单位时间完成的进程数目 
-  - 周转时间TT(Turnaround Time) 
+  - 周转时间TT（Turnaround Time） 
     - 每个进程从提出请求到运行完成的时间 
-  - 响应时间RT(Response Time) 
+  - 响应时间RT（Response Time） 
     - 从提出请求到第一次回应的时间 
   - 其他 
-    - CPU 利用率(CPU Utilization) 
+    - CPU 利用率（CPU Utilization） 
       - CPU做有效工作的时间比例 
-    - 等待时间(Waiting time) 
-      - 每个进程在就绪队列(ready queue)中等待的时间
+    - 等待时间（Waiting time） 
+      - 每个进程在就绪队列（ready queue）中等待的时间
 
 ### 4.2 设计调度算法前的要点讨论
 
@@ -737,9 +737,9 @@ $$
     - 某一进程被调度运行后，除非由于它自身的原因不能运行，否则一直运行下去
 
 - I/O密集型与CPU密集型
-  - I/O密集型或I/O型(I/O-bound) 
+  - I/O密集型或I/O型（I/O-bound） 
     - 频繁的进行I/O，通常会花费很多时间等待I/O操作的完成 
-  - CPU密集型或CPU型或计算密集型(CPU-bound) 
+  - CPU密集型或CPU型或计算密集型（CPU-bound） 
     - 需要大量的CPU时间进行计算
 - 时间片
   - Time slice 或 quantum 
@@ -770,7 +770,7 @@ $$
   - 最短的平均周转时间
     - 在所有进程同时可运行时， 采用SJF调度算法可以得到最短的平均周转时间
   - 不公平
-    - 源源不断的短任务到来，可能使长的任务长时间得不到运行 → 产生 “饥饿”现象 (starvation)
+    - 源源不断的短任务到来，可能使长的任务长时间得不到运行 → 产生 “饥饿”现象 （starvation）
 
 #### 最短剩余时间优先（SRTN - Shortest Remaining Time Next）
 
@@ -815,7 +815,7 @@ $$
 
 - 利用辅助队列来“照顾”I/O密集型进程
 
-<img src="D:\Program Files\sts-bundle\source\OperatingSystem\image\虚拟轮转法（Virtual RR）.png" alt="虚拟轮转法（Virtual RR）" style="zoom:30%;" />
+<img src="https://raw.githubusercontent.com/JasonWangGit/OperatingSystem/master/image/%E8%99%9A%E6%8B%9F%E8%BD%AE%E8%BD%AC%E6%B3%95%EF%BC%88Virtual%20RR%EF%BC%89.png" alt="虚拟轮转法（Virtual RR）" width="500" height="300" />
 
 #### 最高优先级调度（HPF - Highest Priority First）
 
@@ -861,7 +861,7 @@ $$
 
 #### 小结：各种调度算法的比较
 
-<img src="D:\Program Files\sts-bundle\source\OperatingSystem\image\小结：各种调度算法的比较.png" alt="小结：各种调度算法的比较" style="zoom:30%;" />
+<img src="https://raw.githubusercontent.com/JasonWangGit/OperatingSystem/master/image/%E5%B0%8F%E7%BB%93%EF%BC%9A%E5%90%84%E7%A7%8D%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95%E7%9A%84%E6%AF%94%E8%BE%83.png" alt="小结：各种调度算法的比较" width="500" height="300" />
 
 ### 4.6 多处理器调度算法需要考虑的问题
 
@@ -896,7 +896,7 @@ $$
 - 多CPU系统中允许多个线程并行运行
 - 引发线程调度的条件（除进程状态变化之外的条件）： 
   - 一个线程的优先级改变了 
-  - 一个线程改变了它的亲和(Affinity)处理机集合
+  - 一个线程改变了它的亲和（Affinity）处理机集合
 
 ## 第5讲 同步互斥机制1
 
@@ -923,7 +923,7 @@ $$
   - 这一关系称为进程互斥
 - 临界资源：critical resource 
   - 系统中某些资源一次只允许一个进程使用，称这样的资源为临界资源或互斥资源或共享变量
-- 临界区(互斥区)：critical section(region) 
+- 临界区（互斥区）：critical section（region） 
   - 各个进程中对某个临界资源（共享变量）实施操作的程序片段
 
 #### 临界区（互斥区）的使用原则
@@ -938,7 +938,7 @@ $$
 - 软件方案 
   - Dekker解法、Peterson解法
 - 硬件方案
-  - 屏蔽中断、TSL(XCHG)指令
+  - 屏蔽中断、TSL（XCHG）指令
 
 ### 5.3 进程互斥的软件解决方案
 
@@ -962,9 +962,9 @@ $$
 - 软件方法 
   - 编程技巧 
 - 硬件方法 
-- 忙等待(busy waiting) 
+- 忙等待（busy waiting） 
   - 进程在得到临界区访问权之前，持续测试而不做其他事情 
-  - 自旋锁 Spin lock (多处理器 √) 
+  - 自旋锁 Spin lock （多处理器 √） 
 - 优先级反转（倒置）
 
 ### 5.5 进程同步
@@ -1001,24 +1001,24 @@ $$
 ```
 
 - 信号量说明：`semaphore s; `
-- 对信号量可以实施的操作：初始化、P和V（P、V分别 是荷兰语的test(proberen)和increment(verhogen)）
+- 对信号量可以实施的操作：初始化、P和V（P、V分别 是荷兰语的test（proberen）和increment（verhogen））
   - P：down, semWait 
   - V：up, semSignal
-- P、V操作为原语操作(primitive or atomic action)
+- P、V操作为原语操作（primitive or atomic action）
 - 在信号量上定义了三个操作 
-  - 初始化(非负数)、P操作、V操作
+  - 初始化（非负数）、P操作、V操作
 - 最初提出的是二元信号量（解决互斥）之后，推广到一般信号量（多值）或计数信号量 （解决同步）
 
 #### 用P、V操作解决进程间互斥问题
 
 - 分析并发进程的关键活动，划定临界区 
 - 设置信号量 mutex，初值为1 
-- 在临界区前实施 P(mutex) 
-- 在临界区之后实施 V(mutex)
+- 在临界区前实施 P（mutex） 
+- 在临界区之后实施 V（mutex）
 
 ### 5.7 生产者消费者问题
 
-<img src="D:\Program Files\sts-bundle\source\OperatingSystem\image\用信号量解决生产者消费者问题.png" alt="用信号量解决生产者消费者问题" style="zoom:30%;" />
+<img src="https://raw.githubusercontent.com/JasonWangGit/OperatingSystem/master/image/%E7%94%A8%E4%BF%A1%E5%8F%B7%E9%87%8F%E8%A7%A3%E5%86%B3%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85%E9%97%AE%E9%A2%98.png" alt="用信号量解决生产者消费者问题" width="500" height="300" />
 
 ### 5.8 读者写者问题
 
@@ -1050,7 +1050,7 @@ $$
 - 若有读者正在读，该写者等待 
 - 若有其他写者正在写，该写者等待 
 
-<img src="D:\Program Files\sts-bundle\source\OperatingSystem\image\第一类读者写者问题的解法.png" alt="第一类读者写者问题的解法" style="zoom:30%;" />
+<img src="https://raw.githubusercontent.com/JasonWangGit/OperatingSystem/master/image/%E7%AC%AC%E4%B8%80%E7%B1%BB%E8%AF%BB%E8%80%85%E5%86%99%E8%80%85%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E6%B3%95.png" alt="第一类读者写者问题的解法" width="500" height="300" />
 
 ## 第6讲 同步互斥机制2、进程通信机制
 
@@ -1075,7 +1075,7 @@ $$
 - 进程与管程 
   - 进程只能通过调用管程中的过程来间接地访问管程中的数据结构 
 
-<img src="D:\Program Files\sts-bundle\source\OperatingSystem\image\管程的定义.png" alt="管程的定义" style="zoom:30%;" />
+<img src="D:\Program Files\sts-bundle\source\OperatingSystem\image\管程的定义.png" alt="管程的定义" width="500" height="300" />
 
 #### 管程要保证什么？
 
@@ -1090,7 +1090,7 @@ $$
 
 ### 6.2 HOARE管程
 
-<img src="D:\Program Files\sts-bundle\source\OperatingSystem\image\HOARE管程示意图.png" alt="HOARE管程示意图" style="zoom:30%;" />
+<img src="https://raw.githubusercontent.com/JasonWangGit/OperatingSystem/master/image/%E7%AE%A1%E7%A8%8B%E7%9A%84%E5%AE%9A%E4%B9%89.png" alt="HOARE管程示意图" width="500" height="300" />
 
 - 因为管程是互斥进入的，所以当一个进程试图进入一个已被占用的管程时，应当在管程的入口处等待 
   - 为此，管程的入口处设置一个进程等待队列，称作入口等待队列 
@@ -1102,8 +1102,8 @@ $$
 - 条件变量——在管程内部说明和使用的一种特殊类型的变量 
 - `var c:condition;` 
 - 对于条件变量，可以执行wait和signal操作
-  - wait(c)：如果紧急等待队列非空，则唤醒第一个等待者；否则释放管程的互斥权，执行此操作的进程进入c链末尾
-  - signal(c)：如果c链为空，则相当于空操作，执行此操作的进程继续执行；否则唤醒第一个等待者，执行此操作的进程进入紧急等待队列的末尾
+  - wait（c）：如果紧急等待队列非空，则唤醒第一个等待者；否则释放管程的互斥权，执行此操作的进程进入c链末尾
+  - signal（c）：如果c链为空，则相当于空操作，执行此操作的进程继续执行；否则唤醒第一个等待者，执行此操作的进程进入紧急等待队列的末尾
 
 ### 6.3 管程的应用
 
@@ -1118,7 +1118,7 @@ $$
   - 两次额外的进程切换
 - 解决： 
   - signal → notify 
-  - notify：当一个正在管程中的进程执行notify(x) 时，它使得x条件队列得到通知，发信号的进程继续执行
+  - notify：当一个正在管程中的进程执行notify（x） 时，它使得x条件队列得到通知，发信号的进程继续执行
 
 #### 使用NOTIFY要注意的问题
 
@@ -1203,7 +1203,7 @@ $$
 
 #### 复习：进程地址空间
 
-<img src="D:\Program Files\sts-bundle\source\OperatingSystem\image\进程地址空间.png" alt="进程地址空间" style="zoom:30%;" />
+<img src="https://raw.githubusercontent.com/JasonWangGit/OperatingSystem/master/image/%E8%BF%9B%E7%A8%8B%E5%9C%B0%E5%9D%80%E7%A9%BA%E9%97%B4.png" alt="进程地址空间" width="500" height="300" />
 
 #### 讨论
 
@@ -1231,7 +1231,7 @@ $$
 - 动态重定位：在进程执行过程中进行地址变换 → → 即逐条指令执行时完成地址转换 
   - 需要硬件部件支持
 
-<img src="D:\Program Files\sts-bundle\source\OperatingSystem\image\动态重定位实现.png" alt="动态重定位实现" style="zoom:30%;" />
+<img src="https://raw.githubusercontent.com/JasonWangGit/OperatingSystem/master/image/%E5%8A%A8%E6%80%81%E9%87%8D%E5%AE%9A%E4%BD%8D%E5%AE%9E%E7%8E%B0.png" alt="动态重定位实现" width="500" height="300" />
 
 ### 7.2 物理内存管理
 
@@ -1324,7 +1324,7 @@ $$
   - 以页为单位进行分配，并按进程需要的页数来分配；逻辑上相邻的页，物理上不一定相邻 
 - 典型页面尺寸：4K 或 4M
 
-<img src="D:\Program Files\sts-bundle\source\OperatingSystem\image\页式存储管理方案.png" alt="页式存储管理方案" style="zoom:30%;" />
+<img src="https://raw.githubusercontent.com/JasonWangGit/OperatingSystem/master/image/%E9%A1%B5%E5%BC%8F%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86%E6%96%B9%E6%A1%88.png" alt="页式存储管理方案" width="500" height="300" />
 
 ##### 相关数据结构及地址转换
 
@@ -1361,7 +1361,7 @@ $$
   - 用户进程划分：先按段划分，每一段再按页面划分 
 - 逻辑地址：  
 
-<img src="D:\Program Files\sts-bundle\source\OperatingSystem\image\段页式存储管理方案.png" alt="段页式存储管理方案" style="zoom:30%;" />
+<img src="https://raw.githubusercontent.com/JasonWangGit/OperatingSystem/master/image/%E6%AE%B5%E9%A1%B5%E5%BC%8F%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86%E6%96%B9%E6%A1%88.png" alt="段页式存储管理方案" width="500" height="300" />
 
 - 内存划分：同页式存储管理方案 
 - 内存分配：以页为单位进行分配
@@ -1374,7 +1374,7 @@ $$
 
 #### 基本内存管理方案小结
 
-<img src="D:\Program Files\sts-bundle\source\OperatingSystem\image\基本内存管理方案小结.png" alt="基本内存管理方案小结" style="zoom:30%;" />
+<img src="https://raw.githubusercontent.com/JasonWangGit/OperatingSystem/master/image/%E5%9F%BA%E6%9C%AC%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E6%96%B9%E6%A1%88%E5%B0%8F%E7%BB%93.png" alt="基本内存管理方案小结" width="500" height="300" />
 
 ### 7.6 交换技术 SWAPPING
 
@@ -1422,7 +1422,7 @@ $$
 
 #### 虚存与存储体系
 
-<img src="D:\Program Files\sts-bundle\source\OperatingSystem\image\存储器的层次结构.png" alt="存储器的层次结构" style="zoom:30%;" />
+<img src="https://raw.githubusercontent.com/JasonWangGit/OperatingSystem/master/image/%E5%AD%98%E5%82%A8%E5%99%A8%E7%9A%84%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84.png" alt="存储器的层次结构" width="500" height="300" />
 
 - 把内存与磁盘有机地结合起来使用，从而得到一个容量很大的“内存”，即虚存 
 - 虚存是对内存的抽象，构建在存储体系之上，由操作系统协调各存储器的使用 
@@ -1463,7 +1463,7 @@ $$
 - 32位虚拟地址空间的页表规模？ 
   - 页面大小为4K；页表项大小为4字节 
     - 则：一个进程地址空间有 2^20 页 （2^32 / 2^12）
-      - 其页表需要占 1024 页（页表页） （2^20 / (4K / 4)）
+      - 其页表需要占 1024 页（页表页） （2^20 / （4K / 4））
 - 64位虚拟地址空间 
   - 页面大小为4K；页表项大小为8字节 
     - 页表规模： 32,000 TB 
@@ -1471,7 +1471,7 @@ $$
 
 #### 二级页表结构及地址映射
 
-<img src="D:\Program Files\sts-bundle\source\OperatingSystem\image\二级页表结构及地址映射.png" alt="二级页表结构及地址映射" style="zoom:30%;" />
+<img src="https://raw.githubusercontent.com/JasonWangGit/OperatingSystem/master/image/%E4%BA%8C%E7%BA%A7%E9%A1%B5%E8%A1%A8%E7%BB%93%E6%9E%84%E5%8F%8A%E5%9C%B0%E5%9D%80%E6%98%A0%E5%B0%84.png" alt="二级页表结构及地址映射" width="500" height="300" />
 
 #### 引入反转（倒排）页表
 
@@ -1480,13 +1480,13 @@ $$
   - 每个进程一张页表 
 - 解决思路：物理空间是有限的
   - 从物理地址空间出发，系统建立一张页表 
-  - 页表项记录进程i的某虚拟地址(虚页号)与页框号的映射关系
+  - 页表项记录进程i的某虚拟地址（虚页号）与页框号的映射关系
 
 ### 8.3 地址转换过程及TLB引入
 
 #### MMU：内存管理单元
 
-<img src="D:\Program Files\sts-bundle\source\OperatingSystem\image\内存管理单元.png" alt="内存管理单元" style="zoom:30%;" />
+<img src="https://raw.githubusercontent.com/JasonWangGit/OperatingSystem/master/image/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E5%8D%95%E5%85%83.png" alt="内存管理单元" width="500" height="300" />
 
 #### 快表（TLB）的引入
 
@@ -1497,7 +1497,7 @@ $$
 
 如何加快地址映射速度，以改善系统性能？
 
-- 程序访问的局部性原理 → 引入快表(TLB)
+- 程序访问的局部性原理 → 引入快表（TLB）
 
 #### 快表是什么？
 
@@ -1506,7 +1506,7 @@ $$
   - 一种随机存取型存储器，除连线寻址机制外，还有接线逻辑，能按特定的匹配标志在一个存储周期内对所有的字同时进行比较
 - 相联存储器（associative memory） 
   - 特点：按内容并行查找 
-- 保存正在运行进程的页表的子集(部分页表项)
+- 保存正在运行进程的页表的子集（部分页表项）
 
 ### 8.4 页错误（页故障）PAGE FAULT
 
@@ -1579,8 +1579,8 @@ $$
 - 当进程需要使用一个已置换出的页框时，如果该页框还没有被新的内容覆盖，将它从空闲页框集合中移出即可恢复该页面
   - 页缓冲技术： 
     - 不丢弃置换出的页，将它们放入两个表之一：如果未被修改，则放到空闲页链表中，如果修改了，则放到修改页链表中 
-    - 被修改的页定期写回磁盘(不是一次只写一个，大大减少I/O操作的数量，从而减少了磁盘访问时间) 
-    - 被置换的页仍然保留在内存中，一旦进程又要访问该页，可以迅速将它加入该进程的驻留集合(代价很小)
+    - 被修改的页定期写回磁盘（不是一次只写一个，大大减少I/O操作的数量，从而减少了磁盘访问时间） 
+    - 被置换的页仍然保留在内存中，一旦进程又要访问该页，可以迅速将它加入该进程的驻留集合（代价很小）
 
 ### 8.6 置换算法1
 
@@ -1614,7 +1614,7 @@ $$
 
 #### 时钟算法（CLOCK）
 
-<img src="D:\Program Files\sts-bundle\source\OperatingSystem\image\时钟算法.png" alt="时钟算法" style="zoom:30%;" />
+<img src="https://raw.githubusercontent.com/JasonWangGit/OperatingSystem/master/image/%E6%97%B6%E9%92%9F%E7%AE%97%E6%B3%95.png" alt="时钟算法" width="500" height="300" />
 
 #### 最近未使用算法（NRU）
 
@@ -1627,8 +1627,8 @@ $$
       - 启动一个进程时，R、M位置0 
       - R位被定期清零（复位）
 - 时钟算法实现
-  - 从指针的当前位置开始，扫描页框缓冲区，选择遇到的第一个页框（r=0；m=0）用于置换(本扫描过程中，对使用位不做任何修改) 
-  - 如果第1步失败，则重新扫描，选择第一个（r=0； m=1）的页框(本次扫描过程中，对每个跳过的页框，将其使用位设置成0) 
+  - 从指针的当前位置开始，扫描页框缓冲区，选择遇到的第一个页框（r=0；m=0）用于置换（本扫描过程中，对使用位不做任何修改） 
+  - 如果第1步失败，则重新扫描，选择第一个（r=0； m=1）的页框（本次扫描过程中，对每个跳过的页框，将其使用位设置成0） 
   - 如果第2步失败，指针将回到它的最初位置，并且集合中所有页框的使用位均为0。重复第1步， 并且，如果有必要，重复第2步。这样将可以找到供置换的页框
 
 #### 最近最少使用算法（LRU）
@@ -1701,7 +1701,7 @@ $$
   - 内容取决于三个因素： 
     - 访页序列特性 
     - 时刻t 
-    - 工作集窗口长度(Δ)
+    - 工作集窗口长度（Δ）
   - 找出一个不在工作集中的页面并置换它 
   - 每个页表项中有一个字段：记录该页面最后一次被访问的时间 
   - 设置一个时间值T
@@ -1718,13 +1718,13 @@ $$
 
 #### 页面置换算法小结
 
-<img src="D:\Program Files\sts-bundle\source\OperatingSystem\image\页面置换算法小结.png" alt="页面置换算法小结" style="zoom:30%;" />
+<img src="https://raw.githubusercontent.com/JasonWangGit/OperatingSystem/master/image/%E9%A1%B5%E9%9D%A2%E7%BD%AE%E6%8D%A2%E7%AE%97%E6%B3%95%E5%B0%8F%E7%BB%93.png" alt="页面置换算法小结" width="500" height="300" />
 
 ### 8.8 其他相关技术
 
 #### 内存映射文件
 
-- 进程通过一个系统调用(mmap)将一个文件(或部分)映射到其虚拟地址空间的一部分，访问这个文件就象访问内存中的一个大数组，而不是对文件进行读写 
+- 进程通过一个系统调用（mmap）将一个文件（或部分）映射到其虚拟地址空间的一部分，访问这个文件就象访问内存中的一个大数组，而不是对文件进行读写 
 - 在多数实现中，在映射共享的页面时不会实际读入页面的内容，而是在访问页面时，页面才会被每次一页的读入，磁盘文件则被当作后备存储
 - 当进程退出或显式地解除文件映射时，所有被修改页面会写回文件
 
@@ -1758,11 +1758,11 @@ $$
 
 #### 产生死锁的必要条件
 
-- 互斥使用(资源独占)
+- 互斥使用（资源独占）
   - 一个资源每次只能给一个进程使用 
-- 占有且等待(请求和保持，部分分配) 
+- 占有且等待（请求和保持，部分分配） 
   - 进程在申请新的资源的同时保持对原有资源的占有 
-- 不可抢占(不可剥夺) 
+- 不可抢占（不可剥夺） 
   - 资源申请者不能强行的从资源占有者手中夺取资源， 资源只能由占有者自愿释放 
 - 循环等待 
   - 存在一个进程等待队列 {P1 , P2 , … , Pn}, 其中P1等待P2占有的资源，P2等待P3占有的资源，…， Pn等待P1占有的资源，形成一个进程等待环路
@@ -1771,11 +1771,11 @@ $$
 
 - 用有向图描述系统资源和进程的状态 
 - 二元组G=（V，E） 
-  - V：结点的集合，分为P(进程)，R(资源)两部分 
+  - V：结点的集合，分为P（进程），R（资源）两部分 
     - P = {P1, P2, … , Pn} 
     - R = {R1, R2, … , Rm} 
 - E：有向边的集合，其元素为有序二元组
-  -  (Pi, Rj) 或 (Rj, Pi)
+  -  （Pi, Rj） 或 （Rj, Pi）
 
 - 系统由若干类资源构成，一类资源称为一个资源类
   - 每个资源类中包含若干个同种资源，称为资源实例
@@ -1785,14 +1785,14 @@ $$
 - 分配边： 资源实例 → 进程 
 - 申请边： 进程 → 资源类
 
-<img src="D:\Program Files\sts-bundle\source\OperatingSystem\image\资源分配图画法说明.png" alt="资源分配图画法说明" style="zoom:30%;" />
+<img src="D:\Program Files\sts-bundle\source\OperatingSystem\image\资源分配图画法说明.png" alt="资源分配图画法说明" width="500" height="300" />
 
 #### 死锁定理
 
 - 如果资源分配图中没有环路，则系统中没有死锁， 如果图中存在环路则系统中可能存在死锁 
 - 如果每个资源类中只包含一个资源实例，则环路是死锁存在的充分必要条件
 
-<img src="D:\Program Files\sts-bundle\source\OperatingSystem\image\死锁定理.png" alt="死锁定理" style="zoom:30%;" />
+<img src="https://raw.githubusercontent.com/JasonWangGit/OperatingSystem/master/image/%E6%AD%BB%E9%94%81%E5%AE%9A%E7%90%86.png" alt="死锁定理" width="500" height="300" />
 
 #### 资源分配图化简
 
@@ -1827,7 +1827,7 @@ $$
   - 实现方案1：要求每个进程在运行前必须一次性申请它所要求的所有资源，且仅当该进程所要资源均可满足时才给予一次性分配 
   - 实现方案2：在允许进程动态申请资源前提下规定，一个进程在申请新的资源不能立即得到满足而变为等待状态之前，必须释放已占有的全部资源，若需要再重新申请
 - 破坏“不可抢占”条件 
-  - 实现方案：当一个进程申请的资源被其他进程占用时，可以通过操作系统抢占这一资源(两个进程优先级不同) 
+  - 实现方案：当一个进程申请的资源被其他进程占用时，可以通过操作系统抢占这一资源（两个进程优先级不同） 
   - 局限性：适用于状态易于保存和恢复的资源 
     - CPU、内存
 - 破坏“循环等待”条件 
@@ -1836,11 +1836,11 @@ $$
 
 ### 12.4 死锁避免
 
-<img src="D:\Program Files\sts-bundle\source\OperatingSystem\image\小结.png" alt="小结" style="zoom:30%;" />
+<img src="https://raw.githubusercontent.com/JasonWangGit/OperatingSystem/master/image/%E5%B0%8F%E7%BB%93.png" alt="小结" width="500" height="300" />
 
 - 在系统运行过程中，对进程发出的每一个系统能够满足的资源申请进行动态检查，并根据检查结果决定是否分配资源，若分配后系统发生死锁或可能发生死锁，则不予分配，否则予以分配
 - 安全状态： 如果系统中存在一个由所有进程构成的安全序列P1，…，Pn，则称系统处于安全状态
-  - 一个进程序列{P1，…，Pn}是安全的，如果对于每 一个进程Pi(1≤i≤n）： 它以后还需要的资源量不超过系统当前剩余资源量与所有进程Pj (j < i )当前占有资源量之和则称系统处于安全状态 
+  - 一个进程序列{P1，…，Pn}是安全的，如果对于每 一个进程Pi（1≤i≤n）： 它以后还需要的资源量不超过系统当前剩余资源量与所有进程Pj （j < i ）当前占有资源量之和则称系统处于安全状态 
   - 安全状态一定没有死锁发生 
 - 不安全状态：系统中不存在一个安全序列 
   - 不安全状态一定导致死锁
